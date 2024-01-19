@@ -1,0 +1,12 @@
+<!-- configurator/templates/configurator/configure_computer.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post" action="{% url 'configure_computer' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- Include Drawflow here for drag and drop interface -->
+        <!-- Add a "Buy" button to submit the form -->
+        <button type="submit">Buy</button>
+    </form>
+{% endblock %}
